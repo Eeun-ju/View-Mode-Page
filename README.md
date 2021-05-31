@@ -55,7 +55,11 @@
   연결을 대기하는 ip에서 이미 열어둔 포트넘버 5123사용. 아래 순서대로 socket 함수를 실행시킨다. socket이 제대로 생성되었고, bind 되었는지 확인하기 위해 echo를 이용한다.   
   함수 사용 순서 : socket_create() 함수를 이용해 TCP socket 생성 => bind() 함수를 이용해 소켓에 포트번호 연결
 => listen()함수를 이용해 클라이언트의 접속을 기다림 ( 한번에 5개의 클라이언트가 접속할 수 있도록 설정 )
-=> accept()함수에서 클라이언트와 접속을 하고 그 이후 정보를 읽고 보낸다. => close() 함수로 연결을 끊는다.
+=> accept()함수에서 클라이언트와 접속을 하고 그 이후 정보를 읽고 보낸다. => close() 함수로 연결을 끊는다.    
+<p align="center">
+    <img src="./images/socket.png" alt="socket 프로그래밍" width = "400" height= "400">
+  사진 출처 : falinux forum
+ </p>
 
     
        $socket = socket_create(AF_INET,SOCK_STREAM,0); //TCP 통신용 소켓 생성
